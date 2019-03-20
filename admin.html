@@ -1,0 +1,36 @@
+<!--Created and Developed by Vidyut Kodikal, 14881081
+    This is the Admin Page-->
+
+<html XMLns="http://www.w3.org/1999/xHTML"> 
+  <head> 
+    <title>CabsOnline</title> 
+    <script type="text/javascript" src="admin.js"></script>
+    <link href="stylesheet.css" rel="stylesheet">
+  </head> 
+  <body>
+	
+	<!--This is the Main Heading-->
+  	<h1>CabsOnline Admin Page</h1>
+
+  	<div id="confirmation" class = "output"> 
+	    <p></p>  
+	</div> 
+	<br />
+	<div class = "request">
+		<form>
+			<!--Displays the two buttons to display PickUp Requests and shows whether the taxi has been assigned by typing in the booking number on the Page-->
+			<div align = "center">
+				<h2>Display Pick-up Requests</h2>
+				<input name="requests" type="button" class = "formBut" onclick="requesting('requesting.php', 'confirmation', 'date')" value='Display Pick-up Requests'><br/><br/>
+				<h2>Assign Taxi Booking Number</h2>
+				<input type="text" class = "textIn" name="bookingNum">
+				<input name="assign" type ="button" class = "formBut" onclick ="assigning('assign.php','confirmation', bookingNum.value) " value = "Assign Taxi">
+			</div>
+		</form>
+	</div>
+
+	<br />
+	<!--Button to go back to the Home Page-->
+	<a href="home.html" class="homeBut">Home </a>
+</body> 
+</html>
